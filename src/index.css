@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  background: linear-gradient(180deg, #000428, #004e92);
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Header Navigation */
+header {
+  background: rgba(20, 20, 40, 0.95);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00d4ff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: linear-gradient(to right, #00d4ff, #004e92);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  /* background: url('hero-bg-tech.jpg') no-repeat center center/cover; */
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hero p {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+}
+
+button {
+  background: linear-gradient(to right, #00f260, #0575e6);
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 255, 150, 0.7);
+}
+
+/* Section Styling */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #00d4ff;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #b0b0b0;
+}
+
+/* Events and Projects */
+#events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+#events-container .event {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#events-container .event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+#events-container .event h2 {
+  color: #ff9800;
+  margin-bottom: 15px;
+}
+
+#events-container .event p {
+  color: #d0d0d0;
+}
+
+/* Project Cards */
+article {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+article h2 {
+  font-size: 2.2rem;
+  color: #00c6ff;
+  margin-bottom: 10px;
+}
+
+article p {
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #000428;
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero {
+      padding: 60px 20px;
+  }
+
+  #hero h1 {
+      font-size: 2.5rem;
+  }
+
+  #hero p {
+      font-size: 1.2rem;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  #events-container {
+      grid-template-columns: 1fr;
+  }
+}
